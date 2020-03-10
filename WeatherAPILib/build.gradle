@@ -1,0 +1,30 @@
+apply plugin: 'com.android.library'
+
+android {
+    //update the following to match your sdk version
+    compileSdkVersion 26
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation 'com.squareup.okhttp3:okhttp:3.12.1'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.9.0'
+ 
+    api 'joda-time:joda-time:2.9.9'
+    implementation 'org.apache.httpcomponents:httpcore:4.4.3'
+    implementation 'org.apache.httpcomponents:httpmime:4.3.6'
+}
